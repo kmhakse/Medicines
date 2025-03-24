@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Products</title>
+    <link rel="stylesheet" href="beauty.css">
+</head>
+<body>
+    <div id="navbar-container"></div> <!-- Navbar will be loaded here -->
+    <main>
+        <div class="product-grid">
+            <!-- Product boxes will be dynamically added here -->
+        </div>
+    </main>
+    
+    <script>
+        // Load Navbar dynamically
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navbar-container').innerHTML = data);
+    </script>
+    <script src="beauty.js"></script>
+</body>
+</html>

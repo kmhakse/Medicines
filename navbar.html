@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PillPoint</title>
+    <style>
+        /* General Navbar Styling */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #2d615e;
+            padding: 12px 20px;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Logo */
+        .navbar .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #f0f7f8;
+            text-decoration: none;
+        }
+
+        /* Search Bar */
+        .navbar .search-bar {
+            display: flex;
+            align-items: center;
+            gap: 5px; /* Adds space between input and button */
+        }
+        .navbar input[type="text"] {
+            width: 250px;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+        }
+        .navbar button {
+            padding: 8px 12px;
+            border: none;
+            background-color: #00bcd4;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .navbar button:hover {
+            background-color: #008c9e;
+        }
+
+        /* Menu and Cart/Login Section */
+        .menu, .cart-login {
+            display: flex;
+            align-items: center;
+            gap: 15px; /* Ensures proper spacing */
+        }
+        .menu a, .cart-login a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px; /* Proper spacing between icon and text */
+        }
+        .menu a:hover, .cart-login a:hover {
+            color: #00bcd4;
+        }
+
+        /* Icons */
+        .icon {
+            width: 22px;
+            height: 22px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="home_page.html" class="logo"><strong>PillPoint</strong></a>
+        
+        <div class="search-bar">
+            <input type="text" placeholder="Search for products, brands...">
+            <button>Search</button>
+        </div>
+
+        <div class="menu">
+            <a href="#offers"><img src="images/offer.png" alt="Offers" class="icon">Offers</a>
+            <a href="#delivery"><img src="images/delivery.png" alt="Delivery" class="icon">Delivery</a>
+            <a href="#login"><img src="images/login.png" alt="Login" class="icon">Login</a>
+        </div>
+
+        <div class="cart-login">
+            <a href="cart.html"><img src="images/cart (1).png" alt="Cart" class="icon">Cart <span id="cart-count">0</span></a>
+        </div>
+        
+    </div>
+
+</body>
+</html>
+

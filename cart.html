@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - PillPoint</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+
+    <!-- Navbar Included -->
+    <div id="navbar-container"></div>
+
+    <!-- Cart Section -->
+    <section id="cart-container">
+        <h1>Your Cart</h1>
+        <a href="home_page.html" class="continue-shopping">Continue Shopping</a>
+
+        <div id="cart-items"></div>
+
+        <div id="cart-summary">
+            <h2>Total: <span id="total-amount">₹0.00</span></h2>
+            <button id="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </section>
+
+    <script>
+        // Load Navbar
+        fetch("navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar-container").innerHTML = data;
+            });
+    </script>
+
+    <script src="cart.js"></script>
+
+</body>
+</html>
+

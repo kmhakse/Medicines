@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="home_page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div id="navbar-container"></div> <!-- Navbar will be loaded here -->
+
+    <div class="main">
+        <div class="message">
+            <p>You are on pillpoint.com. You can also shop on PillPoint India for a wide range of medicines with fast local delivery.
+              <a>Click here to go to pillpoint.com</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="card-container">
+        <div class="card">
+            <img src="images/,ed.jpg" alt="Medicine">
+            <h3>Medicine</h3>
+            <p>Explore a wide range of medicines and prescriptions.</p>
+            <button onclick="location.href='medi.html'">Shop Now</button>
+        </div>
+        <div class="card">
+            <img src="images/wellness.jpeg" alt="Health Care">
+            <h3>Health Care</h3>
+            <p>Get the best health care products for your well-being.</p>
+            <button onclick="location.href='healthcare.html'">Shop Now</button>
+        </div>
+        <div class="card">
+            <img src="images/supplyments.jpeg" alt="Supplements">
+            <h3>Supplements</h3>
+            <p>Discover top-quality supplements for a healthy lifestyle.</p>
+            <button onclick="location.href='suplements.html'">Shop Now</button>
+        </div>
+        <div class="card">
+            <img src="images/skin.jpg" alt="Skin and Hair Care">
+            <h3>Skin and Hair Care</h3>
+            <p>Browse products for hair and skin care.</p>
+            <button onclick="location.href='beauty.html'">Shop Now</button>
+        </div>
+        <div class="card">
+            <img src="images/lab.jpeg" alt="Lab Tests">
+            <h3>Lab Tests</h3>
+            <p>Get lab tests done at the best prices.</p>
+            <button onclick="location.href='labtest.html'">Shop Now</button>
+        </div>
+    </div>
+    
+    <script>
+        // Load Navbar dynamically
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navbar-container').innerHTML = data);
+    </script>
+
+</body>
+</html>

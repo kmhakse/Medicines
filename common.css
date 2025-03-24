@@ -1,0 +1,91 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-image: url('images/bg1.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+}
+
+/* Product Grid */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Product Box */
+.product-box {
+    width: 280px;
+    padding: 10px;
+    text-align: center;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.product-box:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.03);
+    border-color: #4CAF50;
+}
+
+/* Product Image */
+.product-box img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 8px;
+}
+
+/* Product Name */
+.product-box h3 {
+    font-size: 16px;
+    margin: 8px 0;
+}
+
+/* M.R.P. Styling */
+.product-box .mrp {
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+/* Price Styling */
+.product-box .price {
+    font-size: 14px;
+    color: #4CAF50;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Add to Cart Button */
+.product-box button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.product-box button:hover {
+    background-color: #45a049;
+}

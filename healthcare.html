@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Care</title>
+    <link rel="stylesheet" href="common.css">
+</head>
+<body>
+    <div id="navbar-container"></div>
+    <main>
+        <div class="product-grid">
+            <!-- Products will be loaded dynamically -->
+        </div>
+    </main>
+    <script>
+        // Load Navbar dynamically
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navbar-container').innerHTML = data);
+    </script>
+    <script src="healthcare.js"></script>
+</body>
+</html>
+
