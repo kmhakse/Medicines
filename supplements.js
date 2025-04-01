@@ -1,18 +1,17 @@
 // Array of beauty and lab test products
 const beautyProducts = [
-    { name: "Lakme Face Cream", price: "299", img: "images/beauty.jpg" },
-    { name: "Maybelline Mascara", price: "449", img: "images/beauty2.jpg" },
-    { name: "L'Oreal Lipstick", price: "599", img: "images/beauty3.jpg" },
-    { name: "Complete Blood Count (CBC)", price: "350", img: "images/labtest1.jpg" },
-    { name: "Liver Function Test (LFT)", price: "550", img: "images/labtest2.jpg" },
-    { name: "Thyroid Function Test (TFT)", price: "750", img: "images/labtest3.jpg" },
-    { name: "Lipid Profile", price: "700", img: "images/labtest4.jpg" },
-    { name: "Blood Sugar Test", price: "200", img: "images/labtest5.jpg" },
-    { name: "Vitamin D Test", price: "1200", img: "images/labtest6.jpg" },
-    { name: "Hemoglobin A1C Test", price: "500", img: "images/labtest7.jpg" },
-    { name: "Kidney Function Test (KFT)", price: "650", img: "images/labtest8.jpg" },
+    { name: "Nutrabay Pro Active Multivitamin for Men", price: "199", img: "images/supplyment1.jpg" },
+    { name: "Maybelline MascaraNutrabay Pro Fish Oil Omega 3 (Triple Strength) - 1000mg", price: "779", img: "images/supplyment2.jpg" },
+    { name: "Omega-3", price: "599", img: "images/supplyment3.jpg" },
+    { name: "GNC Women's One Daily Multivitamin", price: "500", img: "images/supplyment4.jpg" },
+    { name: "OZiva Protein & Herbs for Women", price: " 2,999", img: "images/supplyment5.jpg" },
+    { name: "GNC Calcium Plus 1000mg with Magnesium and Vitamin D3", price: "300", img: "images/supplyment6.jpg" },
+    { name: " GNC Mega Men Sport Multivitamin", price: "799", img: "images/supplyment7.jpg" },
+    { name: "Bioactive-B-complex", price: "200", img: "images/supplyment8.webp" },
+    { name: "Inlife Pure Raw Whey Protein Concentrate Powder Supplement| Unflavoured", price: "1500", img: "images/supplyment9.jpg" },
+    { name: "Nature Made Iron Dietary Supplement Tablets", price: "1200", img: "images/supplyment0.jpg" },
+    { name: "NutriFlair Keto Diet Pills 1600mg", price: "2000", img: "images/supplyment11.jpg" },
 ];
-
 // Function to load beauty and lab test products on the page
 function loadBeautyProducts() {
     const productGrid = document.querySelector('.product-grid');

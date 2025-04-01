@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home | PillPoint</title>
     <link rel="stylesheet" href="home_page.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
 
     <div id="navbar-container"></div> <!-- Navbar will be loaded here -->
 
-    <div class="main">
-        <div class="message">
-            <p>You are on pillpoint.com. You can also shop on PillPoint India for a wide range of medicines with fast local delivery.
-              <a>Click here to go to pillpoint.com</a>
-            </p>
+    <!-- Image Carousel (Replaces Message Text) -->
+    <div class="carousel-container">
+        <div class="carousel-slide">
+            <img src="images/10of.png" alt="Slide 1">
+            <img src="images/skin10.png" alt="Slide 2">
+            <img src="images/100.png" alt="Slide 3">
         </div>
     </div>
 
@@ -41,19 +44,13 @@
             <button onclick="location.href='suplements.html'">Shop Now</button>
         </div>
         <div class="card">
-            <img src="images/skin.jpg" alt="Skin and Hair Care">
+            <img src="images/skin.jpg" alt="Lab Tests">
             <h3>Skin and Hair Care</h3>
             <p>Browse products for hair and skin care.</p>
-            <button onclick="location.href='beauty.html'">Shop Now</button>
-        </div>
-        <div class="card">
-            <img src="images/lab.jpeg" alt="Lab Tests">
-            <h3>Lab Tests</h3>
-            <p>Get lab tests done at the best prices.</p>
             <button onclick="location.href='labtest.html'">Shop Now</button>
         </div>
     </div>
-    
+
     <script>
         // Load Navbar dynamically
         fetch('navbar.html')
@@ -61,5 +58,23 @@
             .then(data => document.getElementById('navbar-container').innerHTML = data);
     </script>
 
+    <!-- Carousel Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let index = 0;
+            const slides = document.querySelectorAll(".carousel-slide img");
+            const totalSlides = slides.length;
+            const slideContainer = document.querySelector(".carousel-slide");
+
+            function changeSlide() {
+                index = (index + 1) % totalSlides;
+                slideContainer.style.transform = `translateX(-${index * 100}%)`;
+            }
+
+            setInterval(changeSlide, 3000); // Change image every 3 seconds
+        });
+    </script>
+
 </body>
+
 </html>

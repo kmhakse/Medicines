@@ -4,7 +4,7 @@ body, html {
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
-    background-image: url('images/bg1.jpg'); /* Background image */
+    background-image: url('images/bg1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -19,6 +19,7 @@ body, html {
     background-color: #2d615e;
     padding: 12px 20px;
     color: white;
+    flex-wrap: wrap;
 }
 
 .navbar .logo {
@@ -26,47 +27,41 @@ body, html {
     font-weight: bold;
     color: #f0f7f8;
     text-decoration: none;
+    flex-shrink: 0;
 }
 
 .navbar .menu {
     display: flex;
     align-items: center;
+    gap: 15px;
 }
 
 .navbar .menu a {
     color: white;
     text-decoration: none;
-    margin-right: 30px;
 }
 
-.navbar .menu i {
-    margin-right: 0px;
-    margin-left: 10px;
-}
-
-.navbar .menu a:hover {
-    color: #00bcd4;
+.navbar .menu img {
+    width: 24px;
+    height: 24px;
 }
 
 .navbar .search-bar {
     display: flex;
     align-items: center;
-    margin-right: 25px;
-    margin-left: 65px;
+    margin: 0 20px;
 }
 
 .navbar input[type="text"] {
-    width: 350px;
-    padding: 12px;
+    width: 250px;
+    padding: 10px;
     border: none;
     border-radius: 3px;
     outline: none;
 }
 
 .navbar button {
-    width: 80px;
-    padding: 12px 10px;
-    margin-left: 5px;
+    padding: 10px;
     border: none;
     background-color: #00bcd4;
     color: white;
@@ -76,51 +71,6 @@ body, html {
 
 .navbar button:hover {
     background-color: #008c9e;
-}
-
-.navbar .cart-login {
-    display: flex;
-    align-items: center;
-    margin-left: 0px;
-}
-
-.navbar .cart-login a {
-    color: white;
-    text-decoration: none;
-    margin-left: 8px;
-}
-
-.navbar .cart-login a:hover {
-    color: #00bcd4;
-}
-
-/* Responsive Navbar */
-@media (max-width: 768px) {
-    .navbar {
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 10px;
-    }
-
-    .navbar .search-bar {
-        flex: 1;
-        margin-bottom: 10px;
-    }
-
-    .navbar .menu {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 10px;
-    }
-
-    .navbar .menu a {
-        margin: 5px 0;
-    }
-}
-
-/* Main Content */
-main {
-    padding: 20px;
 }
 
 /* Product Grid Section */
@@ -140,27 +90,36 @@ main {
     border: 1px solid #ddd;
     border-radius: 8px;
     transition: 0.3s ease-in-out;
-}
-
-/* Hover Effect */
-.product-box:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transform: scale(1.03);
-    border-color: #4CAF50;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px; /* Fixed height for uniformity */
 }
 
 /* Product Image */
 .product-box img {
     width: 100%;
-    height: 180px;
-    object-fit: cover;
+    height: 200px; /* Adjusted to fit properly */
+    object-fit: contain; /* Ensures full image is visible */
     margin-bottom: 8px;
+}
+
+/* Product Details (Ensures Fixed Space for Name & Price) */
+.product-box .details {
+    flex-grow: 1; /* Pushes the button to the bottom */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 /* Product Name */
 .product-box h3 {
     font-size: 16px;
     margin: 8px 0;
+    height: 40px; /* Fixed height to keep button aligned */
+    overflow: hidden; /* Prevents text from pushing button */
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 /* M.R.P. Styling */
@@ -179,7 +138,7 @@ main {
     margin-bottom: 10px;
 }
 
-/* Add to Cart Button */
+/* Add to Cart Button (Fixed Position) */
 .product-box button {
     width: 100%;
     padding: 10px;

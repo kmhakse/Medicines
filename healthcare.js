@@ -1,16 +1,16 @@
 // Array of healthcare products
 const healthcareProducts = [
-    { name: "Dettol Hand Wash", price: "199", img: "images/healthcare1.jpg" },
-    { name: "Savlon Sanitizer", price: "99", img: "images/healthcare2.jpg" },
-    { name: "Dabur Honey", price: "349", img: "images/healthcare3.jpg" },
-    { name: "Lakme Face Cream", price: "299", img: "images/beauty.jpg" },
-    { name: "L'Oreal Lipstick", price: "499", img: "images/beauty2.jpg" },
-    { name: "Maybelline Mascara", price: "399", img: "images/beauty3.jpg" },
-    { name: "Nykaa Nail Polish", price: "199", img: "images/beauty4.jpg" },
-    { name: "MAC Foundation", price: "1499", img: "images/beauty5.jpg" },
-    { name: "Himalaya Face Wash", price: "120", img: "images/beauty6.jpg" },
-    { name: "Mamaearth Aloe Vera Gel", price: "299", img: "images/beauty7.jpg" },
-    { name: "The Body Shop Scrub", price: "799", img: "images/beauty8.jpg" },
+    { name: "Dettol Hand Wash", price: "199", img: "images/dettol.jpg" },
+    { name: "Savlon Sanitizer", price: "99", img: "images/sanitizer.jpg" },
+    { name: "Body shop scrub", price: "349", img: "images/bodyshop scrub.jpg" },
+    { name: " Disposable 3 Ply Mask", price: "299", img: "images/face-mask.webp" },
+    { name: "Sanitary Pads", price: "499", img: "images/whisper.webp" },
+    { name: "Disinfectant Spray", price: "399", img: "images/disinfectant-spray.jpg" },
+    { name: " Listerine Cool Mint Mouthwash", price: "199", img: "images/mouthWash.webp" },
+    { name: "Oral-B Vitality 100 Cross Action Electric Toothbrush", price: "1499", img: "images/electricBrush.webp" },
+    { name: "Himalaya Face Wash", price: "120", img: "images/himalaya-facewash.jpg" },
+    { name: "Mamaearth Aloe Vera Gel", price: "299", img: "images/aloevera-gel-moisturizer-1.avif" },
+    { name: "Zivame Cleansing Peach Intimate Wash (100 ml)", price: "799", img: "images/intimateWash.webp" },
 ];
 
 // Function to load healthcare products on the page
